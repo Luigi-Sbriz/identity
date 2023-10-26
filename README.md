@@ -6,7 +6,15 @@ It is an **identity authentication system** that does not require federation of 
 2. Trustees’ network - A special network dedicated to creating a protected channel for exchanging authentication messages between IdPs constitutes the infrastructure to avoid domain federation.
 3. Custodian concept - To better protect personal data IdPs are divided into two types. A generic IdP (trustee) for pure digital authentication and a specific IdP (custodian) under the control of the authority with legal right to the individual's real data, to guarantee physical identity.
 
-![Figure 1: Authorization Flow – Asymmetrical](identity/schema-asymmetric.png)
+Figure 1 shows the components of the classic authentication method [RFC6749].
+
+![Figure 1 Authorization Flow – Asymmetrical](schema-asymmetric.svg)  
+Figure 1: Authorization Flow – Asymmetrical
+
+Figure 2 shows the components needed to enable authentication outside your digital ecosystem.
+
+![Figure 2 Authorization Flow – Symmetrical](schema-symmetric.svg)  
+Figure 2: Authorization Flow – Symmetrical
 
 [//]: # (This may be the most platform independent comment)
 
