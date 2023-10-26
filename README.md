@@ -8,12 +8,12 @@ It is an **identity authentication system** that does not require federation of 
 
 Figure 1 shows the components of the classic authentication method [RFC6749].
 
-![Figure 1 Authorization Flow – Asymmetrical](schema-asymmetric.svg)  
+![Figure 1 Authorization Flow – Asymmetrical](images/schema-asymmetric.svg)  
 Figure 1: Authorization Flow – Asymmetrical
 
 Figure 2 shows the components needed to enable authentication outside your digital ecosystem.
 
-![Figure 2 Authorization Flow – Symmetrical](schema-symmetric.svg)  
+![Figure 2 Authorization Flow – Symmetrical](images/schema-symmetric.svg)  
 Figure 2: Authorization Flow – Symmetrical
 
 [//]: # (This may be the most platform independent comment)
