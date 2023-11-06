@@ -20,25 +20,25 @@ Figure 2: Authorization Flow – Symmetrical
 
 # References
 
-[LS1]: ""
+[LS1]: "https://www.isaca.org/resources/isaca-journal/issues/2022/volume-2/a-symmetrical-framework-for-the-exchange-of-identity-credentials-based-on-the-trust-paradigm-part-1"
     L. Sbriz,
       "A Symmetrical Framework for the Exchange of Identity Credentials
       Based on the Trust Paradigm, Part 1: Identity Trust Abstract
       Model",
       ISACA Journal, 2022-04, vol.2
   
-[LS2]: ""
+[LS2]: "https://www.isaca.org/resources/isaca-journal/issues/2022/volume-2/a-symmetrical-framework-for-the-exchange-of-identity-credentials-based-on-the-trust-paradigm-part-2"
     L. Sbriz,
       "A Symmetrical Framework for the Exchange of Identity Credentials
       Based on the Trust Paradigm, Part 2: Identity Trust Service
       Implementation",
       ISACA Journal, 2022-04, vol.2
     
-[LS3]: ""
+[LS3]: "https://www.isaca.org/resources/isaca-journal/issues/2023/volume-1/how-to-digitally-verify-human-identity"
     L. Sbriz,
       "How to Digitally Verify Human Identity: The Case of Voting",
       ISACA Journal, 2023-01, vol.1
     
-[LS4]: ""
+[LS4]: "https://www.isaca.org/resources/isaca-journal/issues/2023/volume-6"
     L. Sbriz,
       "Modeling an Identity Trust System", ISACA Journal, 2023-11, vol.6 (to be issued)
