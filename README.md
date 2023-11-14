@@ -39,3 +39,6 @@ ISACA Journal, 2023-01, vol.1'
 'L. Sbriz,
 "Modeling an Identity Trust System",
 ISACA Journal, 2023-11, vol.6'
+
+[RFC6749]: https://www.rfc-editor.org/rfc/rfc6749
+'Hardt, D., Ed., "The OAuth 2.0 Authorization Framework", RFC 6749, DOI 10.17487/RFC6749, October 2012'
