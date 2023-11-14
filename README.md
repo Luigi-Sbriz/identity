@@ -9,12 +9,12 @@ It is an **identity authentication system** that does not require federation of 
 Figure 1 shows a use case describing the components of the classic identity recognition method with asymmetry in the authentication process [RFC6749].
 
 ![Figure 1 Authorization Flow – Asymmetrical](images/1_Asymmetric-depiction.svg)  
-Figure 1: Authorization Flow – Asymmetrical
+***Figure 1***: Authorization Flow – Asymmetrical
 
 Figure 2 shows a use case describing the components necessary to enable the identity authentication process in a symmetrical way that can operate in digital ecosystems other than your own.
 
 ![Figure 2 Authorization Flow – Symmetrical](images/2_Symmetric-depiction.svg)  
-Figure 2: Authorization Flow – Symmetrical
+***Figure 2***: Authorization Flow – Symmetrical
 
 The two representations are very similar to each other but it is noted that the symmetric protocol introduces direct communication between the identity providers' authentication servers to allow the circular transit of authentication messages. This direct communication between IdPs allows you to avoid trust between domains.
 
