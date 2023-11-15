@@ -1,5 +1,5 @@
 # Identity Trust System
-Everything related to the **identity trust system** is here included.
+Everything related to the documentation of the **identity trust system** is here included.
 
 It is an **identity authentication system** that does not require federation of authentication domains. The main components are a symmetric authentication protocol and a specific infrastructure to ensure trust in the identity providers. The narrative was exposed in some my articles published on ISACA Journal (see [LS1], [LS2], [LS3], [LS4]). Regarding the components:
 1. Symmetric authentication protocol - Both entities must make themselves known and are authenticated by their identity provider according to a symmetric scheme. This protocol builds on and extends the OAuth Authorization Framework [RFC6749].
