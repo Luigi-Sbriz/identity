@@ -6,14 +6,23 @@ It is an **identity authentication system** that does not require federation of 
 2. **Trustees’ network** - A special network dedicated to creating a protected channel for exchanging authentication messages between IdPs constitutes the infrastructure to avoid domain federation.
 3. **Custodian concept** - To better protect personal data IdPs are divided into two types. A generic IdP (trustee) for pure digital authentication and a specific IdP (custodian) under the control of the authority with legal right to the individual's real data, to guarantee physical identity.
 
-The idea can be explained with an example from the fantasy world. In the forest of the Wise Elves, suppose that Bob the bee wants to buy pollen from Alice the flower. Also, Alice and Bob do not know each other and speak two different languages. However, Alice trusts the elf Amdir and they speak to each other in the language of flowers, while Bob trusts the elf Bor and they speak to each other in the language of bees. The wise elves speak to each other in the elven language known only to them.
+The idea can be explained with an example from the fantasy world. In the forest of the Wise Elves, suppose that Bob the bee wants to buy pollen from Alice the flower. Also, Alice and Bob do not know each other and speak two different languages. However, Alice trusts the elf Amdir and they speak to each other in the language of flowers, while Bob trusts the elf Bor and they speak to each other in the language of bees. The wise elves speak to each other in the ancient elven language known only to them.
 
-Bob begins the communication by giving Alice his identity card guaranteed by the elf Bor. Alice gives Bob her identity card guaranteed by the elf Admir. Then, Alice asks Admir in the language of flowers to verify Bob's identity, while Bob asks Bor in the language of bees to verify Alice's identity. Admir and Bor, communicating in the ancient elven language, exchange the identity cards received and verify them. Finally, Admir communicates the answer to Alice, while Bor communicates the answer to Bob. If the verification is positive, Alice will give the pollen to Bob.
+Bob begins the communication by giving Alice its identity card guaranteed by the elf Bor. Alice gives Bob its identity card guaranteed by the elf Admir. Then, Alice asks Admir in the language of flowers to verify Bob's identity, while Bob asks Bor in the language of bees to verify Alice's identity. Admir and Bor, communicating in the ancient elven language, exchange the identity cards received and verify them. Finally, Admir communicates the answer to Alice, while Bor communicates the answer to Bob. If the verification is positive, Alice will give the pollen to Bob.
 
 Figure 1 shows a use case describing the message flow between Alice and Bob.
 
 ![Figure 1](images/Symmetric_schema_1.png)  
 ***Figure 1***: Identification schema in the forest of the Wise Elves
+
+The exchange of messages between the various subjects involved takes place in six phases:
+1. Alice sends its ID card to Bob with the name of its trusted elf. Bob to Alice does the same with its own ID card.
+2. Alice sends Bob's ID card to its trusted elf. Bob to its trusted elf does the same with Alice's ID card.
+3. Amdir sends Bob's ID card to Bor for verification. Bor to Admir does the same with Alice's ID card.
+4. Amdir sends Bob's encrypted response to Bor. Bor to Admir does the same with Alice's encrypted response.
+5. Amdir sends Bor's encrypted response to Alice. Bor to Bob does the same with Admir's encrypted response.
+6. Alice sends Bob the key to read Admir's encrypted response. Bob to Alice does the same with the key to read Bor's encrypted response.
+If the answers are positive, it means that the trustees have recognized the validity of the two identities.
 
 Message exchange between digital ecosystems can occur in the same way. Simply replace Alice with the User and Bob with the Service Provider. The elves are replaced by their respective trustees (Identity Provider), i.e. the trusted entity that guarantees the authentication of the digital identity. The IdPs communicate with each other on a network dedicated to them.
 
@@ -23,6 +32,12 @@ Figure 2 shows a use case describing the message flow between in digital ecosyst
 ***Figure 2***: Identification scheme in digital ecosystems
 
 The fantasy world and digital world identification schemes are very similar. In the digital world, the symmetric authentication protocol requires that both entities must recognize each other. In addition, each entity must authenticate itself to its own trustee, with a protocol chosen by the IdP. There must be direct communication between the identity providers' authentication servers to close the circular transit of authentication messages. The symmetric authentication process allows you to avoid creating a trust relationship between domains.
+
+Advantages of symmetric authentication based on trust towards identity providers:
+1. Each entity must exchange messages on two different channels; if any one of them is compromised, the process will stop.
+2. Both entities prove their identity; creating fake entities will be much more difficult than asymmetric authentication.
+3. Entities from different domains can still be authenticated; trust between domains is no longer necessary.
+4. Protection of personal data is improved; only the identity provider has all the data while the other parties involved will only share the message authentication data.
 
 <!-- References -->
 
