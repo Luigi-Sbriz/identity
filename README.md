@@ -1,20 +1,26 @@
 # Identity Trust System
 Everything related to the documentation of the **identity trust system** is here included.
 
-It is an **identity authentication system** that does not require federation of authentication domains. The main components are a symmetric authentication protocol and a specific infrastructure to ensure trust in the identity providers. The narrative was exposed in some my articles published on ISACA Journal (see [LS1], [LS2], [LS3], [LS4]). Regarding the components:
-1. Symmetric authentication protocol - Both entities must make themselves known and are authenticated by their identity provider according to a symmetric scheme. This protocol builds on and extends the OAuth Authorization Framework [RFC6749].
-2. Trustees’ network - A special network dedicated to creating a protected channel for exchanging authentication messages between IdPs constitutes the infrastructure to avoid domain federation.
-3. Custodian concept - To better protect personal data IdPs are divided into two types. A generic IdP (trustee) for pure digital authentication and a specific IdP (custodian) under the control of the authority with legal right to the individual's real data, to guarantee physical identity.
+It is an **identity authentication system** that does not require federation of authentication domains. The main components are a **symmetric authentication protocol** and a specific infrastructure to ensure trust in the identity providers. The narrative was exposed in some my articles published on ISACA Journal (see [LS1], [LS2], [LS3], [LS4]). Regarding the components:
+1. **Symmetric authentication protocol** - Both entities must make themselves known and are authenticated by their identity provider according to a symmetric scheme. This protocol builds on and extends the OAuth Authorization Framework [RFC6749].
+2. **Trustees’ network** - A special network dedicated to creating a protected channel for exchanging authentication messages between IdPs constitutes the infrastructure to avoid domain federation.
+3. **Custodian concept** - To better protect personal data IdPs are divided into two types. A generic IdP (trustee) for pure digital authentication and a specific IdP (custodian) under the control of the authority with legal right to the individual's real data, to guarantee physical identity.
 
-Figure 1 shows a use case describing the components of the classic identity recognition method with asymmetry in the authentication process [RFC6749].
+The idea can be explained with an example from the fantasy world. In the forest of the Wise Elves, suppose that Bob the bee wants to buy pollen from Alice the flower. Also, Alice and Bob do not know each other and speak two different languages. However, Alice trusts the elf Amdir and they speak to each other in the language of flowers, while Bob trusts the elf Bor and they speak to each other in the language of bees. The wise elves speak to each other in the elven language known only to them.
 
-![Figure 1 Authorization Flow – Asymmetrical](images/1_Asymmetric-depiction.svg)  
-***Figure 1***: Authorization Flow – Asymmetrical
+Bob begins the communication by giving Alice his identity card guaranteed by the elf Bor. Alice gives Bob her identity card guaranteed by the elf Admir. Then, Alice asks Admir in the language of flowers to verify Bob's identity, while Bob asks Bor in the language of bees to verify Alice's identity. Admir and Bor, communicating in the ancient elven language, exchange the identity cards received and verify them. Finally, Admir communicates the answer to Alice, while Bor communicates the answer to Bob. If the verification is positive, Alice will give the pollen to Bob.
 
-Figure 2 shows a use case describing the components necessary to enable the identity authentication process in a symmetrical way that can operate in digital ecosystems other than your own.
+Figure 1 shows a use case describing the message flow between Alice and Bob.
 
-![Figure 2 Authorization Flow – Symmetrical](images/2_Symmetric-depiction.svg)  
-***Figure 2***: Authorization Flow – Symmetrical
+![Figure 1](images/Symmetric_schema_1.png)  
+***Figure 1***: Identification schema in the forest of the Wise Elves
+
+Similarly, the exchange of messages between digital ecosystems can occur. 
+
+Figure 2 shows a use case describing the message flow between in digital ecosystems.
+
+![Figure 2](images/Symmetric_schema_2.png)  
+***Figure 2***: Identification scheme in digital ecosystems
 
 The two representations are very similar to each other but it is noted that the symmetric protocol introduces direct communication between the identity providers' authentication servers to allow the circular transit of authentication messages. This direct communication between IdPs allows you to avoid trust between domains.
 
