@@ -15,14 +15,14 @@ Figure 1 shows a use case describing the message flow between Alice and Bob.
 ![Figure 1](images/Symmetric_schema_1.png)  
 ***Figure 1***: Identification schema in the forest of the Wise Elves
 
-Similarly, the exchange of messages between digital ecosystems can occur. 
+Message exchange between digital ecosystems can occur in the same way. Simply replace Alice with the User and Bob with the Service Provider. The elves are replaced by their respective trustees (Identity Provider), i.e. the trusted entity that guarantees the authentication of the digital identity. The IdPs communicate with each other on a network dedicated to them.
 
 Figure 2 shows a use case describing the message flow between in digital ecosystems.
 
 ![Figure 2](images/Symmetric_schema_2.png)  
 ***Figure 2***: Identification scheme in digital ecosystems
 
-The two representations are very similar to each other but it is noted that the symmetric protocol introduces direct communication between the identity providers' authentication servers to allow the circular transit of authentication messages. This direct communication between IdPs allows you to avoid trust between domains.
+The two representations are very similar to each other. but it is noted that the symmetric protocol introduces direct communication between the identity providers' authentication servers to allow the circular transit of authentication messages. This direct communication between IdPs allows you to avoid trust between domains.
 
 <!-- References -->
 
