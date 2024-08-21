@@ -15,60 +15,8 @@ Conceptually, in a client-server schema, the authentication process begins with 
 
 Figure 3 shows the abstract depiction of the symmetric authentication sequence. A SVG image is available [here](https://raw.githubusercontent.com/Luigi-Sbriz/identity/main/images/3_Symmetric-sequence-diagram.svg).
 
-    ┌───────────┐                                            ┌───────────┐
-    │Relying    ├-(1)--Request Authentication--------------->│Authorizati│
-    │           │                                            │           │
-    │Party      │<-(2)-Return Server Token-------------------┤on Server S│
-    └───────────┘                                            └───────────┘
-    ┌───────────┐      ┌───────────┐      ┌───────────┐      ┌───────────┐
-    │Resource   │      │User       │      │Authorizati│      │Relying    │
-    │           │      │           │      │           │      │           │
-    │Owner      │      │Agent      │      │on Server C│      │Party      │
-    └─────┬─────┘      └─────┬─────┘      └─────┬─────┘      └─────┬─────┘
-          |      Request     |                  |                  |
-          ├-(3)--Protected-->+-(4)--Send Access Request----------->|
-          |      Resource    |                  |                  |
-          |                  |<-(5)-Return Server Token------------┘
-          |                  |                  |
-          |                  ├(6)-Request Client|
-          |                  |  Token & Send    |
-          |                  |  Server Token--->|
-          |                  |                  |
-          |<-(7)-Request Credentials via UA-----┤
-          |                  |                  |
-          └-(8)--Present Credentials via UA---->|
-                             |                  |
-                             └<-(9)---Return    |
-                                Client Token----┘
-    ┌───────────┐      ┌───────────┐      ┌───────────┐      ┌───────────┐
-    │User       │      │Authorizati│      │Authorizati│      │Relying    │
-    │           │      │           │      │           │      │           │
-    │Agent      │      │on Server C│      │on Server S│      │Party      │
-    └─────┬─────┘      └─────┬─────┘      └─────┬─────┘      └─────┬─────┘
-          |                  |                  |                  |
-          ├-(10)--Request Protected Resource & Send Client Token-->|
-          |                  |                  |                  |
-          |                  |<-(12)---Send     |<-(11)---Send     |
-          |                  |  Client Token----┤  Client Token----┤
-          |                  |                  |                  |
-          |                  ├-(13)---Return    |                  |
-          |                  |  Server Token--->|                  |
-          |                  |                  |                  |
-          └<-(14)--Return of |                  └-(15)--Return of  |
-             Authorization---┘                     Authorization-->┘
-    ┌───────────┐      ┌───────────┐      ┌───────────┐      ┌───────────┐
-    │Resource   │      │User       │      │Relying    │      │Resource   │
-    │           │      │           │      │           │      │           │
-    │Owner      │      │Agent      │      │Party      │      │Server     │
-    └─────┬─────┘      └─────┬─────┘      └─────┬─────┘      └─────┬─────┘
-          |                  |                  |                  |
-          |                  |                  ├(16)Call Protected|
-          |                  |                  | Resource-------->|
-          |                  |                  |                  |
-          └<-(19)-----Return |<-(18)-----Return |<-(17)-----Return |
-            Protect.Resource-┘ Protect.Resource-┘ Protect.Resource-┘
-    
-    Figure 3: Symmetric Authentication Protocol - Sequence diagram
+![Figure 3 Symmetric Authentication Protocol - Sequence diagram](images/3_Symmetric-sequence-diagram.svg)  
+***Figure 3***: Symmetric Authentication Protocol - Sequence diagram
 
 (1) - (2)	The ***RP*** requests authentication to its ***AS*** (marked "S" as server) and receives the server token (access token from the service provider's AS). The relying party must be provided with its own access token to resolve multiple requests.  
 (3) - (5)	The ***RO*** requests access to the protected resource via the user agent. The ***UA*** activates the authentication process by requesting access to the ***RP***, which responds by providing the server token. The response may also include the server ID token.  
