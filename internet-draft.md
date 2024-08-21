@@ -1,23 +1,23 @@
 ---
-stand_alone: true
+> stand_alone: true
 ipr: trust200902
 area: SEC
 wg: Web Authorization Protocol
 submissiontype: IETF
 
-title: Identity Trust System
+> title: Identity Trust System
 abbrev: Identity Trust
 docname: draft-sbriz-identity-trust-system-02
 cat: std
 lang: en
 
-author:
+> author:
   ins: L. Sbriz
   name: Luigi Sbriz
   org: Cybersecurity & Privacy Senior Consultant
   email: luigi@sbriz.eu
 
-normative:
+> normative:
   RFC6749:
   RFC5322:
   RFC5321:
@@ -72,7 +72,8 @@ informative:
       name: Luigi Sbriz
     date: 2023-11
 
---- abstract
+<!-- --- abstract -->
+# Abstract
 
 This document defines an identity trust system, which is a general digital identity authentication system that requires no federation of authentication domains. The main components of the authentication process between two entities are:
 
