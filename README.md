@@ -22,7 +22,7 @@ Figure 2 shows a use case describing the message flow between in digital ecosyst
 ![Figure 2](images/Symmetric_schema_2.png)  
 ***Figure 2***: Identification scheme in digital ecosystems
 
-The two representations are very similar to each other. but it is noted that the symmetric protocol introduces direct communication between the identity providers' authentication servers to allow the circular transit of authentication messages. This direct communication between IdPs allows you to avoid trust between domains.
+The fantasy world and digital world identification schemes are very similar. In the digital world, the symmetric authentication protocol requires that both entities must recognize each other. In addition, each entity must authenticate itself to its own trustee, with a protocol chosen by the IdP. There must be direct communication between the identity providers' authentication servers to close the circular transit of authentication messages. The symmetric authentication process allows you to avoid creating a trust relationship between domains.
 
 <!-- References -->
 
