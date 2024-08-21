@@ -16,9 +16,9 @@ Figure 1 shows a use case describing the message flow between Alice and Bob.
 ***Figure 1***: Identification schema in the forest of the Wise Elves
 
 The exchange of messages between the various subjects involved takes place in six phases:
-1. Alice sends its ID card to Bob with the name of its trusted elf. Bob to Alice does the same with its own ID card.
-2. Alice sends Bob's ID card to its trusted elf. Bob to its trusted elf does the same with Alice's ID card.
-3. Amdir sends Bob's ID card to Bor for verification. Bor to Admir does the same with Alice's ID card.
+1. Alice sends its ID card to Bob with the name of its trusted elf. Bob to Alice does the same with its own ID card. 
+2. Alice sends Bob's ID card to its trusted elf. Bob to its trusted elf does the same with Alice's ID card. 
+3. Amdir sends Bob's ID card to Bor for verification. Bor to Admir does the same with Alice's ID card. 
 4. Amdir sends Bob's encrypted response to Bor. Bor to Admir does the same with Alice's encrypted response.
 5. Amdir sends Bor's encrypted response to Alice. Bor to Bob does the same with Admir's encrypted response.
 6. Alice sends Bob the key to read Admir's encrypted response. Bob to Alice does the same with the key to read Bor's encrypted response.
