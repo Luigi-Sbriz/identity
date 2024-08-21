@@ -1,28 +1,33 @@
 ---
-> stand_alone: true
+```
+stand_alone: true
 ipr: trust200902
 area: SEC
 wg: Web Authorization Protocol
 submissiontype: IETF
-
-> title: Identity Trust System
+```
+```
+title: Identity Trust System
 abbrev: Identity Trust
 docname: draft-sbriz-identity-trust-system-02
 cat: std
 lang: en
-
-> author:
+```
+```
+author:
   ins: L. Sbriz
   name: Luigi Sbriz
   org: Cybersecurity & Privacy Senior Consultant
   email: luigi@sbriz.eu
-
-> normative:
+```
+```
+normative:
   RFC6749:
   RFC5322:
   RFC5321:
   RFC5234:
-
+```
+```
 informative:
   ITU1:
     target: "https://www.itu.int/dms_pub/itu-t/opb/tut/T-TUT-CCICT-2020-PDF-E.pdf"
@@ -71,14 +76,14 @@ informative:
       ins: L. Sbriz
       name: Luigi Sbriz
     date: 2023-11
-
+```
 <!-- --- abstract -->
 # Abstract
 
 This document defines an identity trust system, which is a general digital identity authentication system that requires no federation of authentication domains. The main components of the authentication process between two entities are:
 
-1. Symmetric authentication protocol - Both entities must recognize each other and are authenticated by their identity provider according to a symmetric message exchange scheme. It builds on and extends the OAuth Authorization Framework RFC6749.
-2. Trustees' network - A special network, dedicated to creating a protected environment for exchanging authentication messages between Identity Providers (IdPs), constitutes the infrastructure to avoid domain federation.
-3. Custodian concept - IdPs are divided into two typologies to better protect personal data and link digital identity to physical one. A generic IdP (called trustee) to manage digital authentication only and a specific IdP (called custodian), with the legal right to process the individual's real data and under the control of country's authority, to manage the physical identity and the link with the digital one.
+1. **Symmetric authentication protocol** - Both entities must recognize each other and are authenticated by their identity provider according to a symmetric message exchange scheme. It builds on and extends the OAuth Authorization Framework RFC6749.
+2. **Trustees' network** - A special network, dedicated to creating a protected environment for exchanging authentication messages between Identity Providers (IdPs), constitutes the infrastructure to avoid domain federation.
+3. **Custodian concept** - IdPs are divided into two typologies to better protect personal data and link digital identity to physical one. A generic IdP (called trustee) to manage digital authentication only and a specific IdP (called custodian), with the legal right to process the individual's real data and under the control of country's authority, to manage the physical identity and the link with the digital one.
 
---- middle
+<!-- --- middle -->
