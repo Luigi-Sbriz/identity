@@ -5,14 +5,14 @@
 Some terms are used with a precise meaning.
 
 - "***resource owner***": 
-An entity capable of granting access to a protected resource. When the resource owner is a person, it is referred to as an "***end user***", a "***consumer***" or an "***individual***". This is sometimes abbreviated as "***RO***".
+An entity capable of granting access to a protected resource. When the resource owner is a person, it is also referred to as "***end user***", "***consumer***" or "***individual***". This is sometimes abbreviated as "***RO***".
 - "***service provider***": 
 An entity capable of managing access to a protected resource. It is generally a legal person. This is sometimes abbreviated as "***SP***".
 - "***identity provider***": 
 An entity capable of managing and recognizing the identity of registered entities. The set of all entities registered by the identity provider is also known as the IdP's digital ecosystem. This is sometimes abbreviated as "***IdP***".
 - "***resource server***": 
 The server hosting the protected resources, capable of accepting and responding to protected resource requests using access tokens. The resource server is often accessible via an API. This is sometimes abbreviated as "***RS***".
-- "***client***", for software used also "***user agent***": 
+- "***client***", for software is also referred to as "***user agent***": 
 An application making protected resource requests on behalf of the resource owner and with its authorization. The term "client" does not imply any particular implementation characteristics (e.g., whether the application executes on a server, a desktop, or other devices).
 - "***relying party***": 
 An application making protected resource authorization on behalf of the service provider and also managing its identity. The "relying party" acts as the "client" but on service provider side. This is sometimes abbreviated as "***RP***".
