@@ -82,7 +82,7 @@ This document defines an identity trust system, which is a general digital ident
 
 --- middle
 
-[Introduction](contents/1_Introduction.md) 
+@[:verbatim](contents/1_Introduction.md) 
 
 # Conventions and Definitions
 
