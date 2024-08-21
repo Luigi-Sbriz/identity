@@ -1,6 +1,6 @@
 # Conventions and Definitions
 
-{::boilerplate bcp14-tagged}
+<!-- {::boilerplate bcp14-tagged} -->
 
 Some terms are used with a precise meaning.
 
