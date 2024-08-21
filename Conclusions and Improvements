@@ -1,0 +1,11 @@
+# Conclusions
+
+To operate effectively between the different digital ecosystems, the identity management system MUST be based on a common authentication protocol that symmetrically carries out the same operations in complete transparency, entrusting the decision on recognition to a trusted third party. Confidence in the reliability of recognition carried out by the identity guarantor (IdP or IdC) cannot be based on the technological component alone. It is therefore necessary to involve an independent supervisory authority for technological aspects and the local competent public authority responsible for data protection.
+
+To improve trust in the digital operations between the consumer and the service provider three guarantees must be provided.
+
+1. The mutual recognition between consumer and service provider.
+2. The control and minimization of the personal information processed.
+3. In case of legal need, the ability to match the digital identities of consumer and provider against their real-world identity.
+
+Due to the strong synergy that can be achieved, it is advisable to maintain constant technical alignment with the standard [RFC6749] and the related specifications to implement point-to-point authentication, within the broader symmetric authentication framework.
