@@ -6,29 +6,8 @@ The relationship between digital and physical identity should be managed only by
 
 The identity custodian certifies that it is a real identity that requires the digital identity but can also provide personal data to identity trustee with the consent of the data subject. The identity trustee provides the authentication service for its digital ecosystem. A use case describing the relationship between identity custodian, identity trustee, and digital identity is provided in figure 4. A SVG image is available [here](https://raw.githubusercontent.com/Luigi-Sbriz/identity/main/images/4_Identity-custodian-concept.svg).
 
-    ............................              ............................
-    : Real ecosystem X         :              :         Real ecosystem Y :
-    :              ...................  ...................              :
-    :              :Digital          :  :          Digital:              :
-    :              :ecosystem A      :  :      ecosystem B:              :
-    :              :  ┌───────────┐  :  :  ┌───────────┐  :              :
-    :              :  │  Digital  │  :  :  │  Digital  │  :              :
-    :      ┌──────────┤           ├────────┤           ├──────────┐      :
-    :      │       :  │Identity A │  :  :  │Identity B │  :       │      :
-    :      │       :  └─────┬─────┘  :  :  └─────┬─────┘  :       │      :
-    :      │       :        │        :  :        │        :       │      :
-    :      │       :        │        :  :        │        :       │      :
-    :┌─────┴─────┐ :  ┌─────┴─────┐  :  :  ┌─────┴─────┐  : ┌─────┴─────┐:
-    :│ Identity  │ :  │ Identity  │  :  :  │ Identity  │  : │ Identity  │:
-    :│           ╞════╡           ╞════════╡           ╞════╡           │:
-    :│Custodian X│ :  │Provider A │  :  :  │Provider B │  : │Custodian Y│:
-    :└───────────┘ :  └───────────┘  :  :  └───────────┘  : └───────────┘:
-    : Real         :                 :  :                 :         Real :
-    : identity A   :.................:  :.................:   identity B :
-    :                          :              :                          :
-    :..........................:              :..........................:
-    
-    Figure 4: The Identity Custodian Use Case
+![Figure 4](images/4_Identity-custodian-concept.svg)  
+***Figure 4***: The Identity Custodian Use Case
 
 Generally, identity provider must carry out the recognition and registration of the user's personal data before being able to guarantee its identity. The collection of the data of the natural person must be carried out in accordance with the protection provided for by the regulations in force. To ensure that the processing of personal data is restricted and controlled, it is useful to divide the set of IdPs into two categories. In the first, there will be IdPs (also called trustees) that only manage digital identity operations, and in the second, IdCs (identity custodians) that guarantee trustees that the applicant's identity is real. The IdC's category should operate under the responsibility of the legal authority that manages the real identity of the individual (i.e. who issues the identity card). 
 
@@ -45,78 +24,13 @@ In short the roles involved in the trust-based authentication system.
 
 The request for a new digital identity is activated by the natural person towards the chosen trustee. The trustee will request confirmation from the identity custodian if the request lawfully came from a real person. In case of confirmation, it will record the personal data that the data subject has authorized IdC to transfer. A use case describing the request of a new digital identity is provided in figure 5. A SVG image is available [here](https://raw.githubusercontent.com/Luigi-Sbriz/identity/main/images/5_New-identity-use-case.svg).
 
-                      ┌───────────┐        ┌───────────┐
-                      │Identity   │        │Identity   │
-                      │           │        │           │
-                      │Custodian  │        │Provider   │
-                      └─────┬─────┘        └─────┬─────┘
-                      IdC   │              IdP   │
-                   ecosystem│           ecosystem│
-                   .........│.........  .........│.........
-                   :  ┌─────┴─────┐  :  :  ┌─────┴─────┐  :
-                   :  │Authorizat.│  :  :  │Authorizat.│  :
-                   :  │           ╞════════╡           │  :
-                   :  │Server IdC │  :  :  │Server IdP │  :
-                   :  └─────┬─────┘  :  :  └─────┬─────┘  :
-                   :        │        :  :        │        :
-                   :        │        :  :        │        :
-    ┌───────────┐  :  ┌─────┴─────┐  :  :  ┌─────┴─────┐  :
-    │Data       │  :  │User       │  :  :  │Relying    │  :
-    │           ├─────┤           ├────────┤           │  :
-    │Subject    │  :  │Agent      │  :  :  │Party  IdP │  :
-    └───────────┘  :  └───────────┘  :  :  └───────────┘  :
-                   :.................:  :.................:
-    
-    Figure 5: Abstract of New Digital Identity Request
+![Figure 5](images/5_New-identity-use-case.svg)  
+***Figure 5***: Abstract of New Digital Identity Request
 
 Figure 6 shows the abstract representation of the message exchange sequence to request a new digital identity. A SVG image is available [here](https://raw.githubusercontent.com/Luigi-Sbriz/identity/main/images/6_New-identity-sequence-diagram.svg).
 
-    ┌───────────┐      ┌───────────┐      ┌───────────┐      ┌───────────┐
-    │Data       │      │User       │      │Authorizat.│      │Relying    │
-    │           │      │           │      │           │      │           │
-    │Subject    │      │Agent      │      │Server IdC │      │Party  IdP │
-    └───────────┘      └─────┬─────┘      └─────┬─────┘      └─────┬─────┘
-          |                  |                  |                  |
-          ├-(1)-Request New->+-(2)--Send New Identity Request----->|
-          |     Identity     |                  |                  |
-          |                  |<--(3)--Return IdP Token-------------┘
-          |                  |                  |
-          |                  ├(4)--Request IdC  |
-          |                  |     Token & Send |
-          |                  |     IdP Token--->|
-          |                  |                  |
-          |<-(5)-Request Credentials via UA-----┤
-          |                  |                  |
-          └-(6)--Present Credentials via UA---->|
-                             |                  |
-                             └<--(7)--Return    |
-                                      IdC Token-┘
-    ┌───────────┐      ┌───────────┐      ┌───────────┐      ┌───────────┐
-    │User       │      │Authorizat.│      │Authorizat.│      │Relying    │
-    │           │      │           │      │           │      │           │
-    │Agent      │      │Server IdC │      │Server IdP │      │Party  IdP │
-    └─────┬─────┘      └─────┬─────┘      └─────┬─────┘      └─────┬─────┘
-          |                  |                  |                  |
-          ├-(8)--Request New Identity & Send IdC Token------------>|
-          |                  |                  |                  |
-          |                  |<--(10)--Send IdC |<--(9)--Send IdC  |
-          |                  |         Token----┤        Token-----┤
-          |                  |                  |                  |
-          |                  ├-(11)--Return IdP |                  |
-          |                  |     Token & Send |                  |
-          |                  |     ID Token---->|                  |
-          |                  |                  |                  |
-          └<-(12)---Return   |                  └-(13)---Return    |
-                    ID Token-┘                     Client Token--->┘
-    ┌───────────┐                ┌───────────┐               ┌───────────┐
-    │Data       │                │User       │               │Relying    │
-    │           │                │           │               │           │
-    │Subject    │                │Agent      │               │Party  IdP │
-    └─────┬─────┘                └─────┬─────┘               └─────┬─────┘
-          |                            |                           |
-          └<-(15)------Return ID Token-┘<-(14)-Return Client Token-┘
-    
-    Figure 6: New Digital Identity Request - Sequence diagram
+![Figure 6](images/6_New-identity-sequence-diagram.svg)  
+***Figure 6***: New Digital Identity Request - Sequence diagram
 
 (1) - (3)	The ***data subject*** requests the new digital identity via the user agent to the identity provider. The ***UA*** activates the authentication process by requesting the new identity to the ***RP***, which responds by providing the IdP token (access token from IdP's AS).  
 (4) - (7)	The ***UA*** requests the IdC token (access token from the custodian's AS) to its ***AS***, sending also the IdP token received from ***RP***. The custodian's ***AS*** requests credentials from the ***data subject*** and returns the IdC token to the ***UA***.  
